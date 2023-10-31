@@ -11,7 +11,6 @@ type Props = {
    pageInfo: PageInfo
 }
 
-const isBrowser = typeof window !== "undefined";
 
 function About({pageInfo}: Props) {
    //const { pageInfo} = useFetchProps();

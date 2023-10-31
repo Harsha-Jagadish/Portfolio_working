@@ -26,7 +26,6 @@ type Props = {
   socials: Social[];
 };
 
-const isBrowser = typeof window !== "undefined";
 
 export default function Home({socials, projects, experiences, skills, pageInfo}: Props){
 
@@ -98,7 +97,8 @@ export const getStaticProps: GetStaticProps<Props>=async()=>{
       skills,
       projects,
       socials,
-    }
-  }
+    },
+    revalidate: 10,
+  };
 
-}
+};
