@@ -9,7 +9,6 @@ import Skills from "../components/Skills";
 import Projects from "../components/Projects";
 import ContactMe from "../components/ContactMe";
 import dynamic from 'next/dynamic';
-import Styles from "../styles";
 import { GetStaticProps } from 'next';
 import { Experience, PageInfo, Project, Skill, Social } from '../typings';
 import { fetchPageInfo } from '../utils/fetchPageInfo';
