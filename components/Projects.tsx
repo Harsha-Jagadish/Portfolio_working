@@ -19,7 +19,7 @@ function Projects({projects}: Props) {
   return (
     <motion.div 
     
-    className="h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full jusitfy-evenly mx-auto items-center z-0 ">
+    className="h-screen relative text-center flex overflow-hidden flex-col max-w-full jusitfy-evenly mx-auto items-center z-0 ">
        <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl"> 
         Projects
         </h3>
@@ -29,7 +29,7 @@ function Projects({projects}: Props) {
             {projects?.map((project, i) => (
                 <div 
                     key={project?._id} 
-                    className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen"
+                    className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 "
                     >
                     
                     {project.image && (
@@ -53,7 +53,7 @@ function Projects({projects}: Props) {
                         {project?.technologies.map((technology) =>(
                             technology && technology.image ? (
                             <img 
-                                className='h-10 w-10'
+                                className='h-10 w-10 rounded-full'
                                 key={technology._id}
                                 src={urlFor(technology.image).url()}
                                 alt=" "
@@ -67,10 +67,10 @@ function Projects({projects}: Props) {
                         </p>
                         
 
-                        <h5 className="bg-[#F7AB0A] text-lg text-center ">
+                        <h5 className="bg-[#F7AB0A] py-5 px-10 rounded-md text-black font-bold text-lg ">
                             Build:{" "}
                             <a href={project?.linkToBuild} target="_blank" rel="noopener noreferrer">
-                                    {project?.linkToBuild}
+                                    GitHub Link
                             </a>
                         </h5>
 

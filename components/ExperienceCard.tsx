@@ -17,7 +17,7 @@ function ExperienceCard({experience}: Props) {
     console.log("Experience Data:", experience);
     
   return (
-    <article className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] p-10 hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden">
+    <article className="flex  rounded-md items-center space-y-7 flex-shrink-0 w-[500px] md:w-[800px] xl:w-[900px] snap-center bg-[#292929] p-10 hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden">
         
         {experience?.companyImage && (
         <motion.img
@@ -26,7 +26,7 @@ function ExperienceCard({experience}: Props) {
              whileInView={{opacity: 1, y:0}}
              
 
-            className="w-32 h-32 rounded-full xl:w-[200px] xl:h-[200px] object-cover object-center"
+            className="w-24 h-24 rounded-full xl:w-[100px] xl:h-[100px] object-cover object-center"
             src={urlFor(experience?.companyImage).url()}
             //src="/SAP-logo-1024x1024.jpg"
             alt=""
